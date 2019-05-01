@@ -1,5 +1,6 @@
 // imports
 @import "reset.less";
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe');
 
 // Breakpoints
 @mobileBreakpoint:360px;
@@ -8,16 +9,22 @@
 
 
 // fonts
+@funkyFont: 'ZCOOL KuaiLe';
+
 @fontSmall:1.5rem;
 @fontMedium: 1.8rem;
 @fontLarge: 2.3rem;
+@fontXLarge: 5rem;
 
 // headers
-
+.header1() {
+	font-size: @fontXLarge;
+	font-family: @funkyFont;
+}
 
 // general styling
 .container {
-	min-width: @@mobileBreakpoint;
+	min-width: @mobileBreakpoint;
 	margin: 0 auto;
 }
 
@@ -29,14 +36,8 @@ header {
 	}
 
 	ul li {
-		margin:1rem;
-		font-family: 'ZCOOL KuaiLe';
+		margin:1rem 0;
+		.header1();
 	}
 
 }
-
-p {
-	font-family: 'ZCOOL KuaiLe';
-}
-
-
