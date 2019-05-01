@@ -177,15 +177,21 @@ a:hover {
   display: flex;
   justify-content: center;
 }
+header {
+  padding: 2em;
+}
 header ul {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-header ul li {
-  margin: 1rem 0;
+a.menu-link {
   font-size: 5rem;
   font-family: 'ZCOOL KuaiLe';
+  color: black;
+}
+a.menu-link:hover {
+  color: grey;
 }
 .description {
   padding-bottom: 2rem;

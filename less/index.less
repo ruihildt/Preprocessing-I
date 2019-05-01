@@ -69,18 +69,25 @@ a {
 }
 
 header {
+	padding:2em;
+
 	ul {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}
 
-	ul li {
-		margin:1rem 0;
-		.header1();
-	}
 }
 
+a.menu-link {
+	.header1();
+
+	color:black;
+
+	&:hover {
+		color: grey;
+	}
+}
 
 
 // CV page
