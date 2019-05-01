@@ -146,11 +146,29 @@ table {
   font-weight: 400;
   src: local('ZCOOL KuaiLe Regular'), local('ZCOOLKuaiLe-Regular'), url(https://fonts.gstatic.com/s/zcoolkuaile/v4/tssqApdaRQokwFjFJjvM6h2moYb3.ttf) format('truetype');
 }
+h1 {
+  font-size: 5rem;
+  font-family: 'ZCOOL KuaiLe';
+  text-align: center;
+  padding: 1.5rem;
+}
+h2 {
+  font-size: 3rem;
+  font-family: 'ZCOOL KuaiLe';
+  text-align: center;
+  padding: 2rem;
+}
+h3 {
+  font-size: 2rem;
+  font-family: 'ZCOOL KuaiLe';
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem;
+}
 p {
   font-family: 'Crimson Text';
   font-size: 2rem;
   line-height: 2.5rem;
-  margin: 1rem;
 }
 a {
   font-family: 'ZCOOL KuaiLe';
@@ -203,18 +221,34 @@ a.menu-link:hover {
 .description img {
   width: 100%;
 }
-.description h1 {
-  font-size: 5rem;
-  font-family: 'ZCOOL KuaiLe';
-  text-align: center;
-  padding: 1.5rem;
+.description p {
+  margin: 1rem;
 }
-.description h3 {
-  font-size: 2rem;
-  font-family: 'ZCOOL KuaiLe';
-  text-transform: uppercase;
-  text-align: center;
-  padding: 1rem;
+.middle .column {
+  /*flex container*/
+  display: flex;
+  flex-direction: column;
+}
+.middle .column p {
+  margin: 1rem;
+}
+.middle .column p.list {
+  padding: 2rem;
+  border: 0.2rem grey solid;
+  border-top: none;
+  margin: 0;
+}
+.middle .column p.list:nth-of-type(1) {
+  border-top: 0.2rem grey solid;
+}
+.bottom {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.bottom .row {
+  display: flex;
+  justify-content: space-between;
 }
 .hidden {
   display: none;
