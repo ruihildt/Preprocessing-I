@@ -1,7 +1,42 @@
 // imports
 @import "reset.less";
 
-html, body {
-	height: 100%;
+// Breakpoints
+@mobileBreakpoint:360px;
+@tabletBreakpoint: 520px;
+@desktopBreakpoint:868px;
+
+
+// fonts
+@fontSmall:1.5rem;
+@fontMedium: 1.8rem;
+@fontLarge: 2.3rem;
+
+// headers
+
+
+// general styling
+.container {
+	min-width: @@mobileBreakpoint;
+	margin: 0 auto;
 }
+
+header {
+	ul {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	ul li {
+		margin:1rem;
+		font-family: 'ZCOOL KuaiLe';
+	}
+
+}
+
+p {
+	font-family: 'ZCOOL KuaiLe';
+}
+
 

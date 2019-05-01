@@ -130,7 +130,20 @@ table {
 * {
   box-sizing: border-box;
 }
-html,
-body {
-  height: 100%;
+/* Change make by default 10px = 1rem */
+:root {
+  font-size: 62.5%;
+}
+.container {
+  max-width: 868px;
+  margin: 0 auto;
+  font-size: 2.3rem;
+}
+header ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header ul li {
+  margin: 1rem;
 }
