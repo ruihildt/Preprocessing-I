@@ -21,6 +21,8 @@
 
 @grey: grey;
 @lightGray: rgb(218, 218, 218);
+@black: black;
+@white: white;
 
 // headers
 .header1() {
@@ -70,10 +72,10 @@ a {
 	font-family: @funkyFont;
 	font-size: @fontLarge;
 	text-decoration: none;
-	color:white;
+	color:@white;
 
 	&:hover {
-		color:black;
+		color:@black;
 	}
 }
 
@@ -111,7 +113,7 @@ header {
 a.menu-link {
 	.header1();
 
-	color:black;
+	color:@black;
 
 	&:hover {
 		color: @grey;
@@ -167,10 +169,7 @@ a.menu-link {
 	.row {
 		display: flex;
 		justify-content: space-between;
-
-		> table:nth-child(1) {
-
-		}
+		align-content: center;
 	}
 }
 

@@ -32,7 +32,7 @@ Follow these steps for completing your project.
 * [x] Content: Navigation - Build a simple navigation with 4 items of your choosing
 * [x] Content: Intro - Have a short introduction as to why you would be a good hire
 * [x] Content: Skills - Showcase a list of skills you have somewhere on your resume
-* [x] Content: Work History - Showcase your work history somewhere on your resume
+* [] Content: Work History - Showcase your work history somewhere on your resume
 * [x] Content: Contact - Provide some way a potential employer could contact you.  Phone number, email, or a full on contact form (doesn't have to work)
 * [x] Variables: Incorporate variables in your project for color and font stacks.  
 * [x] Nesting: Every selector should be nested inside the main container.  Avoid having global styles unless they are element level.

@@ -249,6 +249,7 @@ a.menu-link:hover {
 .bottom .row {
   display: flex;
   justify-content: space-between;
+  align-content: center;
 }
 .hidden {
   display: none;
