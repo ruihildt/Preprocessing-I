@@ -135,14 +135,47 @@ table {
   font-size: 62.5%;
 }
 @font-face {
+  font-family: 'Crimson Text';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Crimson Text Regular'), local('CrimsonText-Regular'), url(https://fonts.gstatic.com/s/crimsontext/v9/wlp2gwHKFkZgtmSR3NB0oRJfbwhW.ttf) format('truetype');
+}
+@font-face {
   font-family: 'ZCOOL KuaiLe';
   font-style: normal;
   font-weight: 400;
   src: local('ZCOOL KuaiLe Regular'), local('ZCOOLKuaiLe-Regular'), url(https://fonts.gstatic.com/s/zcoolkuaile/v4/tssqApdaRQokwFjFJjvM6h2moYb3.ttf) format('truetype');
 }
+p {
+  font-family: 'Crimson Text';
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin: 1rem;
+}
+a {
+  font-family: 'ZCOOL KuaiLe';
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: black;
+}
 .container {
   min-width: 360px;
   margin: 0 auto;
+}
+.button {
+  background-color: grey;
+  margin: 2rem;
+  padding: 2rem 0;
+  border-radius: 5px;
+  width: 70vw;
+  /*flex item*/
+  align-self: center;
+  /*flex container*/
+  display: flex;
+  justify-content: center;
 }
 header ul {
   display: flex;
@@ -153,4 +186,30 @@ header ul li {
   margin: 1rem 0;
   font-size: 5rem;
   font-family: 'ZCOOL KuaiLe';
+}
+.description {
+  padding-bottom: 2rem;
+  /*flex container*/
+  display: flex;
+  flex-direction: column;
+  background-color: #dadada;
+}
+.description img {
+  width: 100%;
+}
+.description h1 {
+  font-size: 5rem;
+  font-family: 'ZCOOL KuaiLe';
+  text-align: center;
+  padding: 1.5rem;
+}
+.description h3 {
+  font-size: 2rem;
+  font-family: 'ZCOOL KuaiLe';
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem;
+}
+.hidden {
+  display: none;
 }

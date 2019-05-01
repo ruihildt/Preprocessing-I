@@ -1,6 +1,6 @@
 // imports
 @import "reset.less";
-@import url('https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe');
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe|Crimson+Text');
 
 // Breakpoints
 @mobileBreakpoint:360px;
@@ -10,10 +10,10 @@
 
 // fonts
 @funkyFont: 'ZCOOL KuaiLe';
-
+@textFont: 'Crimson Text';
 @fontSmall:1.5rem;
 @fontMedium: 1.8rem;
-@fontLarge: 2.3rem;
+@fontLarge: 2rem;
 @fontXLarge: 5rem;
 
 // headers
@@ -22,10 +22,50 @@
 	font-family: @funkyFont;
 }
 
-// general styling
+.header3() {
+	font-size: @fontLarge;
+	font-family: @funkyFont;
+	text-transform: uppercase;
+}
+
+// general
+
+p {
+	font-family: @textFont;
+	font-size: @fontLarge;
+	line-height: 2.5rem;
+	margin: 1rem;
+}
+
+a {
+	font-family: @funkyFont;
+	font-size: @fontLarge;
+	text-decoration: none;
+	color:white;
+
+	&:hover {
+		color:black;
+	}
+}
+
 .container {
 	min-width: @mobileBreakpoint;
 	margin: 0 auto;
+}
+
+.button {
+	background-color: grey;
+	margin: 2rem;
+	padding:2rem 0;
+	border-radius: 5px;
+	width: 70vw;
+
+	/*flex item*/
+	align-self: center;
+
+	/*flex container*/
+	display: flex;
+	justify-content: center;
 }
 
 header {
@@ -39,5 +79,36 @@ header {
 		margin:1rem 0;
 		.header1();
 	}
+}
 
+
+
+// CV page
+.description {
+	padding-bottom: 2rem;
+	/*flex container*/
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(218, 218, 218) ;
+
+	img {
+		width: 100%;
+	}
+
+	h1 {
+		.header1();
+		text-align: center;
+		padding:1.5rem;
+	}
+
+	h3 {
+		.header3();
+		text-align: center;
+		padding: 1rem;
+	}
+}
+
+
+.hidden {
+	display: none;
 }
