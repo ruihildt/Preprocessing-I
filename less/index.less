@@ -1,59 +1,179 @@
-// Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+// imports
+@import "reset.less";
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe|Crimson+Text');
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+// Breakpoints
+@mobileBreakpoint:360px;
+@tabletBreakpoint: 520px;
+@desktopBreakpoint:868px;
+
+
+// fonts
+@funkyFont: 'ZCOOL KuaiLe';
+@textFont: 'Crimson Text';
+@fontSmall:1.5rem;
+@fontMedium: 1.8rem;
+@fontLarge: 2rem;
+@fontXLarge:3rem;
+@fontXXLarge: 5rem;
+
+// colors
+
+@grey: grey;
+@lightGray: rgb(218, 218, 218);
+@black: black;
+@white: white;
+
+// headers
+.header1() {
+	font-size: @fontXXLarge;
+	font-family: @funkyFont;
 }
 
-/* Set every element's box-sizing to border-box */
-* {
-    box-sizing: border-box;
+.header2() {
+	font-size: @fontXLarge;
+	font-family: @funkyFont;
 }
 
-html, body {
-    height: 100%;
+.header3() {
+	font-size: @fontLarge;
+	font-family: @funkyFont;
+	text-transform: uppercase;
 }
 
+// general
+h1 {
+	.header1();
+	text-align: center;
+	padding: 1.5rem;
+}
+
+h2 {
+	.header2();
+	text-align:center;
+	padding: 2rem;
+
+}
+
+h3 {
+	.header3();
+	text-align: center;
+	padding: 1rem;
+}
+
+
+p {
+	font-family: @textFont;
+	font-size: @fontLarge;
+	line-height: 2.5rem;
+}
+
+a {
+	font-family: @funkyFont;
+	font-size: @fontLarge;
+	text-decoration: none;
+	color:@white;
+
+	&:hover {
+		color:@black;
+	}
+}
+
+.container {
+	min-width: @mobileBreakpoint;
+	margin: 0 auto;
+}
+
+.button {
+	background-color: @grey;
+	margin: 2rem;
+	padding:2rem 0;
+	border-radius: 5px;
+	width: 70vw;
+
+	/*flex item*/
+	align-self: center;
+
+	/*flex container*/
+	display: flex;
+	justify-content: center;
+}
+
+header {
+	padding:2em;
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+}
+
+a.menu-link {
+	.header1();
+
+	color:@black;
+
+	&:hover {
+		color: @grey;
+	}
+}
+
+
+// CV page
+.description {
+	padding-bottom: 2rem;
+	/*flex container*/
+	display: flex;
+	flex-direction: column;
+	background-color: @lightGray ;
+
+	img {
+		width: 100%;
+	}
+
+	p {
+		margin: 1rem;
+	}
+}
+
+.middle {
+	.column {
+		/*flex container*/
+		display: flex;
+		flex-direction: column;
+
+			p {
+				margin: 1rem;
+			}
+
+			p.list {
+				padding: 2rem;
+				border: 0.2rem @grey solid;
+				border-top:none;
+				margin: 0;
+			}
+
+			p.list:nth-of-type(1) {
+				border-top: 0.2rem @grey solid;
+			}
+	}
+}
+
+.bottom {
+	margin: 2rem;
+	display: flex;
+	flex-direction: column;
+
+	.row {
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+	}
+}
+
+
+.hidden {
+	display: none;
+}
